@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import {Routes, Route} from 'react-router-dom'
 import './App.css';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import Koirani from './pages/Koirani';
+
+import Koti from './pages/Koti';
+import Kuvia from './pages/Kuvia';
+import Minusta from './pages/Minusta';
+import Pentueet from './pages/Pentueet';
+import Pentuja from './pages/Pentuja';
+import Yhteytta from './pages/Yhteytta';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <Navbar/>
+      <Routes>
+        <Route path='/' element={<Koti/>}/>
+        <Route path='koirani' element={<Koirani/>}/>
+        <Route path='minusta' element={<Minusta/>}/>
+        <Route path='kuvia' element={<Kuvia/>}/>
+        <Route path='pentuja' element={<Pentuja/>}/>
+        <Route path='pentueet' element={<Pentueet/>}/>
+        <Route path='yhteytta' element={<Yhteytta/>}/>
+      </Routes>
+      <Footer/>
+    </main>
   );
 }
 
