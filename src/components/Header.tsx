@@ -1,4 +1,4 @@
-import beagle from '../assets/beagle.png'
+import beagle from '../assets/header_pic.jpg'
 import { ImageDiv, Section } from './Header.styles';
 
 
